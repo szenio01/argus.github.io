@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI-Powered Farming Solutions: Revolutionizing Agriculture in Cyprus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -43,6 +43,7 @@
             margin: 20px 0;
             font-size: 18px;
             text-align: left;
+            overflow-x: auto;
         }
         th, td {
             padding: 12px;
@@ -58,8 +59,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            max-width: 100%;
-            height: auto;
+            width: 50%;
         }
         ul ul {
             list-style-type: circle;
@@ -73,41 +73,14 @@
             text-decoration: underline;
         }
         .content-wrapper {
-            width: 90%;
+            width: 70%;
             margin: 0 auto;
             padding: 20px;
             position: relative;
             z-index: 1;
         }
-        @media (max-width: 768px) {
-            .table-responsive {
-                overflow-x: auto;
-                white-space: nowrap;
-                display: flex;
-                flex-wrap: nowrap;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-            }
-            .table-responsive table {
-                min-width: 100%;
-                flex: 0 0 100%;
-                scroll-snap-align: start;
-            }
-            .table-pagination {
-                text-align: center;
-                margin-top: 10px;
-            }
-            .dot {
-                height: 10px;
-                width: 10px;
-                margin: 0 5px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-            }
-            .active-dot {
-                background-color: #2E8B57;
-            }
+        .table-responsive {
+            overflow-x: auto;
         }
     </style>
 </head>
@@ -135,55 +108,63 @@
             <img src="team.png" alt="Team Image">
             <h3>Team Members</h3>
             <div class="table-responsive">
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <td>Andreas Pattichis</td>
-                        <td>Kyriakos Kyriakou</td>
-                        <td>Andreas Alexandrou</td>
-                        <td>Nikolas Stavrou</td>
-                        <td>Sotiris Zenios</td>
-                        <td>Christos Eleftheriou</td>
-                    </tr>
-                    <tr>
-                        <th>Role</th>
-                        <td>Co-Founder & CEO/Project Manager</td>
-                        <td>Co-Founder & CTO</td>
-                        <td>Co-Founder & AI/Software Engineer</td>
-                        <td>Co-Founder & AI/Software Engineer</td>
-                        <td>Co-Founder & AI/Software Engineer</td>
-                        <td>Co-Founder & AI/Software Engineer</td>
-                    </tr>
-                    <tr>
-                        <th>Education</th>
-                        <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Barcelona (EMAI Programme), studying with a fully funded scholarship.</td>
-                        <td class="truncate">Bachelor’s in Computer Science. Master’s in AI from the University of Edinburgh.</td>
-                        <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                        <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                        <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                        <td class="truncate">Bachelor’s in Computer Science. Currently completing a Master’s in AI at the University of Cyprus, expected December.</td>
-                    </tr>
-                    <tr>
-                        <th>Current Status</th>
-                        <td class="truncate">Leading the strategic direction and project management of the company.</td>
-                        <td class="truncate">Leading the technical direction of the company.</td>
-                        <td class="truncate">Focused on advancing the company’s computer vision capabilities and leading the development of vision-based AI products.</td>
-                        <td class="truncate">Contributing to the development and implementation of AI solutions, focusing on software engineering and system integration.</td>
-                        <td class="truncate">Specializing in AI-driven software development, working on the integration of AI technologies into practical applications.</td>
-                        <td class="truncate">Focused on refining AI algorithms and ensuring the robustness of the company’s software solutions.</td>
-                    </tr>
-                    <tr>
-                        <th>Experience</th>
-                        <td>Extensive background in AI with a focus on Medical Imaging. Full stack development experience in a corporate environment. Strong creative and entrepreneurial skills demonstrated in past projects.</td>
-                        <td>Specialization in AI, software engineering, and data management with extensive knowledge gained through academic and professional experience. Consulting experience from both current and past roles.</td>
-                        <td>Extensive experience in computer vision projects. Previous work experience in Analytics. Showcased innovative problem-solving skills and creativity across multiple projects.</td>
-                        <td>Involvement in numerous AI and software engineering projects. Consulting experience from past role. Strong problem-solving skills, with a notable ability to research, learn, and apply new concepts efficiently and in-depth.</td>
-                        <td>Participation in a variety of AI and software engineering projects. Full stack development experience in a corporate environment. Consistent adaptability skills in fast-paced environments.</td>
-                        <td>Involvement in numerous AI and software engineering projects. Experience with data science through large projects like his thesis.</td>
-                    </tr>
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Education</th>
+                            <th>Current Status</th>
+                            <th>Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Andreas Pattichis</th>
+                            <td>Co-Founder & CEO/Project Manager</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Barcelona (EMAI Programme), studying with a fully funded scholarship.</td>
+                            <td class="truncate">Leading the strategic direction and project management of the company.</td>
+                            <td>Extensive background in AI with a focus on Medical Imaging. Full stack development experience in a corporate environment. Strong creative and entrepreneurial skills demonstrated in past projects.</td>
+                        </tr>
+                        <tr>
+                            <th>Kyriakos Kyriakou</th>
+                            <td>Co-Founder & CTO</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Master’s in AI from the University of Edinburgh.</td>
+                            <td class="truncate">Leading the technical direction of the company.</td>
+                            <td>Specialization in AI, software engineering, and data management with extensive knowledge gained through academic and professional experience. Consulting experience from both current and past roles.</td>
+                        </tr>
+                        <tr>
+                            <th>Andreas Alexandrou</th>
+                            <td>Co-Founder & AI/Software Engineer</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                            <td class="truncate">Focused on advancing the company’s computer vision capabilities and leading the development of vision-based AI products.</td>
+                            <td>Extensive experience in computer vision projects. Previous work experience in Analytics. Showcased innovative problem-solving skills and creativity across multiple projects.</td>
+                        </tr>
+                        <tr>
+                            <th>Nikolas Stavrou</th>
+                            <td>Co-Founder & AI/Software Engineer</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                            <td class="truncate">Contributing to the development and implementation of AI solutions, focusing on software engineering and system integration.</td>
+                            <td>Involvement in numerous AI and software engineering projects. Consulting experience from past role. Strong problem-solving skills, with a notable ability to research, learn, and apply new concepts efficiently and in-depth.</td>
+                        </tr>
+                        <tr>
+                            <th>Sotiris Zenios</th>
+                            <td>Co-Founder & AI/Software Engineer</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                            <td class="truncate">Specializing in AI-driven software development, working on the integration of AI technologies into practical applications.</td>
+                            <td>Participation in a variety of AI and software engineering projects. Full stack development experience in a corporate environment. Consistent adaptability skills in fast-paced environments.</td>
+                        </tr>
+                        <tr>
+                            <th>Christos Eleftheriou</th>
+                            <td>Co-Founder & AI/Software Engineer</td>
+                            <td class="truncate">Bachelor’s in Computer Science. Currently completing a Master’s in AI at the University of Cyprus, expected December.</td>
+                            <td class="truncate">Focused on refining AI algorithms and ensuring the robustness of the company’s software solutions.</td>
+                            <td>Involvement in numerous AI and software engineering projects. Experience with data science through large projects like his thesis.</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
-            <div class="table-pagination">
+			<div class="table-pagination">
                 <span class="dot active-dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -215,7 +196,134 @@
             <h3>Vision for Learning and Growth</h3>
             <p>Our journey is driven by a commitment to expanding our knowledge and expertise in all necessary areas, reflecting a growth mindset that is essential for long-term success. We believe in the power of continuous learning, and our team is dedicated to acquiring the skills and knowledge needed to not only excel in our technical domain but also to grow as leaders, innovators, and entrepreneurs.</p>
         </section>
-        <!-- Remaining sections unchanged -->
+        <section id="why-we-exist">
+            <h2>2. Why We Exist</h2>
+            <p>The agricultural industry in Cyprus faces several challenges, including employee management, high costs, and limited technology adoption. We aim to address these issues by developing AI-driven solutions that are affordable, scalable, and targeted to meet the specific needs of small to medium-sized farms.</p>
+            <h3>Market Pain Points</h3>
+            <h4>Employee Management Issues:</h4>
+            <ul>
+                <li>One of the biggest challenges observed in farms, especially in Cyprus, is the management of farm labor. The work is often viewed as undesirable, leading to high turnover rates and a lack of motivation among employees. Farmers frequently struggle with ensuring that necessary tasks are completed efficiently and reliably, as employees often lack the drive to perform at the required standard.</li>
+            </ul>
+            <h4>High Costs and Affordability:</h4>
+            <ul>
+                <li>While advanced agricultural technologies exist, they are typically designed for large-scale operations and come with high costs that are prohibitive for small to medium-sized farms. These smaller farms, particularly those that are run as profitable businesses rather than side-hustles, are looking for affordable, scalable solutions that can improve their operations without the need for significant upfront investment.</li>
+            </ul>
+            <h4>Limited Scope of Existing Technologies:</h4>
+            <ul>
+                <li>Current agricultural technologies often focus on broad solutions that do not address specific issues. For example, many existing systems fail to provide precise monitoring of animal welfare during critical stages, such as calving, which is vital for the health and productivity of livestock.</li>
+            </ul>
+            <h4>Operational Inefficiencies:</h4>
+            <ul>
+                <li>Farmers often face the burden of constant supervision and manual monitoring. This challenge is exacerbated by varying farm sizes and the lack of affordable, effective, and targeted technology, resulting in many tasks being performed manually, which leads to inefficiencies and potential losses.</li>
+            </ul>
+            <h4>Resistance to Technology Adoption:</h4>
+            <ul>
+                <li>While there is a growing interest in agricultural technology, smaller farms, especially those run as side-hustles, may be hesitant to adopt new technologies due to perceived complexity or a lack of understanding of the benefits. This makes it essential to target farms that are run as serious, profitable businesses and to provide clear, tangible value propositions.</li>
+            </ul>
+        </section>
+        <section id="our-solution">
+            <h2>3. Our Solution</h2>
+            <p><b>Introducing Our AI Solutions:</b> We aim to revolutionize farming by developing a suite of AI-driven products that are designed to meet the needs of farms of various sizes that are focused on profitability and operational efficiency. Our solutions are not just about introducing new technology; they are tailored to complement existing systems, focusing on solving specific, often overlooked issues that are critical to farm operations. Our AI-driven solutions are affordable, scalable, and designed to address the unique challenges that farms face today—challenges such as effective employee management, precise monitoring of livestock, and reducing the burden of constant supervision. By targeting these pain points, we enable farmers to enhance efficiency, improve animal welfare, and reduce operational costs, all in a cost-effective manner that integrates seamlessly with their current operations.</p>
+            <h3>Calv Alert - Key Features</h3>
+            <img src="product.png" alt="Team Image">
+            <h4>Real-Time Monitoring with Live Stream:</h4>
+            <ul>
+                <li>Continuous video feed analysis with the ability to view live footage through the app, allowing farmers to visually confirm situations as they happen.</li>
+            </ul>
+            <h4>Immediate, Customizable Alerts:</h4>
+            <ul>
+                <li>Instant notifications sent via the mobile app, SMS, or other messaging systems, with options for farmers to customize and manage alert settings.</li>
+                <li>For those less familiar with technology, we offer additional options such as phone call alerts or specialized equipment like a dedicated tablet or receiver for notifications.</li>
+                <li>All information can be localized to ensure ease of use in different regions and languages.</li>
+            </ul>
+            <h4>Non-Invasive Technology:</h4>
+            <ul>
+                <li>No physical devices are attached to animals, minimizing discomfort and reducing the risk of infection.</li>
+            </ul>
+            <h4>Scalability:</h4>
+            <ul>
+                <li>Capable of monitoring multiple calving pens simultaneously, making it suitable for farms of all sizes.</li>
+            </ul>
+            <h4>User-Friendly App Interface:</h4>
+            <ul>
+                <li>An intuitive app that supports multiple users, enabling farm workers and veterinarians to easily receive alerts, view live feeds, and monitor calving signs.</li>
+            </ul>
+            <h4>Optional Data Storage and Analysis:</h4>
+            <ul>
+                <li>Provides the option to store video footage and detection data for later review, helping farmers analyze patterns over time.</li>
+            </ul>
+            <h3>Collaboration with Smyrillis Jersey Farm:</h3>
+            <p>We are already in collaboration with Smyrillis Jersey Farm, one of the most technologically advanced farms in Cyprus, to test and perfect our Calv Alert system. This partnership provides a valuable opportunity to refine our product in a real-world setting, with the potential to expand our collaboration once the product proves successful.</p>
+            <h3>Future Product Ideas</h3>
+            <p>Calv Alert is just the first step in our journey to revolutionize agriculture with AI. We have a bold vision for the future, where technology seamlessly integrates into every aspect of farm management, empowering farmers to operate more efficiently, sustainably, and profitably. Here’s a glimpse of what’s on the horizon:</p>
+            <h4>AI-Enhanced Crop Monitoring:</h4>
+            <ul>
+                <li>Leveraging advanced computer vision and machine learning, we aim to develop systems that continuously monitor crop health in real-time.</li>
+                <li>These systems will detect early signs of disease, nutrient deficiencies, and pest infestations, enabling farmers to take swift, targeted action to protect and optimize their yields.</li>
+            </ul>
+            <h4>Smart Farm Management Platforms:</h4>
+            <ul>
+                <li>Imagine a centralized, intelligent platform where every aspect of farm operations can be controlled and optimized.</li>
+                <li>From precision irrigation systems that adjust based on weather patterns to livestock monitoring that ensures optimal health and productivity, our platform will bring together data and automation to transform the way farms are managed.</li>
+            </ul>
+            <h4>Advanced Animal Health Diagnostics:</h4>
+            <ul>
+                <li>We envision non-invasive, AI-powered tools that monitor the health and well-being of livestock with unparalleled accuracy.</li>
+                <li>These tools will provide early warnings for potential health issues, allowing farmers to intervene before problems escalate, ultimately leading to healthier animals and more efficient operations.</li>
+            </ul>
+            <p>Each of these products will build on the success of Calv Alert, expanding our impact across the agricultural sector. By continuously innovating and responding to the needs of farmers, we aim to create a comprehensive suite of AI-driven tools that drive the future of farming.</p>
+            <h3>Central Hub Platform</h3>
+            <p>We envision a central hub platform, accessible via both web and mobile apps, where clients can control and manage all the AI-driven products they have from our company. This platform will allow farmers to smoothly switch between different tools based on their immediate needs, providing a seamless and integrated farm management experience.</p>
+        </section>
+        <section id="market-approach">
+            <h2>4. Market Approach</h2>
+            <h4>Target Audience:</h4>
+            <ul>
+                <li>Our initial focus is on small to medium-sized farms in Cyprus that are run as profitable businesses. These farms are actively seeking cost-effective, scalable solutions to enhance their operations, particularly those that can address specific challenges such as employee management and precise livestock monitoring. We recognize that not all small farms may be interested in adopting new technology, especially if they operate as side-hustles. Therefore, our target audience consists of those farms where there is a clear commitment to improving efficiency and productivity through innovative tools.</li>
+            </ul>
+            <h4>Unique Value Proposition:</h4>
+            <ul>
+                <li>Our AI solutions are designed to be affordable, non-invasive, and easily integrated with existing farm technologies. We offer farmers tools that address specific, often overlooked but critical problems, such as managing farm labor effectively and ensuring precise monitoring during vital processes like calving. By focusing on these pain points, we enable farmers to improve efficiency, enhance animal welfare, and reduce operational costs, all without requiring significant overhauls of their existing systems.</li>
+            </ul>
+        </section>
+        <section id="vision-mission">
+            <h2>5. Vision & Mission</h2>
+            <p><strong>Vision:</strong> "To become a global leader in AI-powered agricultural solutions, transforming the farming industry by making advanced technology accessible and practical for every farm, regardless of size."<br>
+                <strong>Mission:</strong> "Our mission is to integrate AI into everyday farming practices to enhance productivity, ensure animal welfare, and make farming more sustainable."</p>
+        </section>
+        <section id="strategies">
+            <h2>6. Strategies</h2>
+            <p><b>Product Strategy:</b> Starting with Calv Alert, our strategy is to develop and refine products that address specific needs within the farming industry. Each product is designed to integrate seamlessly into a broader suite of AI-driven tools, offering comprehensive solutions for farm management.</p>
+            <p><b>Competitive Advantage:</b> Our competitive advantage lies in our ability to deliver targeted AI solutions that are both cost-effective and easy to implement. Our collaboration with Smyrillis Jersey Farm provides a strong validation of our approach and opens the door to further opportunities in the agricultural sector.</p>
+        </section>
+        <section id="values-we-offer">
+            <h2>7. Values We Offer</h2>
+            <p><b>Client Value Proposition:</b> We offer farmers peace of mind with AI solutions that are non-invasive, cost-effective, and easy to integrate into their existing workflows. Our products ensure both animal welfare and operational efficiency, making farming more manageable and sustainable.</p>
+            <p><b>Environmental Impact:</b> Our solutions promote sustainable farming practices by reducing waste, improving resource management, and minimizing the environmental footprint of agricultural operations.</p>
+        </section>
+        <section id="conclusion-next-steps">
+            <h2>8. Conclusion & Next Steps</h2>
+            <p><b>Summary:</b> Our company is dedicated to transforming the farming industry through AI-driven solutions that are accessible, practical, and impactful. Starting with Calv Alert, we aim to build a comprehensive suite of tools that address the unique challenges faced by farmers today.</p>
+            <p><b>Next Steps:</b> We will continue to develop and refine Calv Alert in collaboration with Smyrillis Jersey Farm, while also exploring opportunities to develop additional products that can further enhance farm management and sustainability.</p>
+            <p><b>Call to Action:</b> We invite potential partners, investors, and collaborators to join us on this journey as we work to bring the future of farming into the present with innovative AI solutions.</p>
+        </section>
+        <section id="contact-information">
+            <h2 class="contact">9. Contact Information</h2>
+            <p>For more information or to discuss potential partnerships and collaborations, please contact us at:</p>
+            <ul>
+                <li>Email: <a href="mailto:apattichis.argus@gmail.com">apattichis.argus@gmail.com</a></li>
+                <li>Phone: +357 96366296</li>
+                <li>LinkedIn Profiles:
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/andreas-pattichis/" target="_blank">Andreas Pattichis</a></li>
+                        <li><a href="https://www.linkedin.com/in/kyriakos-kyriakou-2a4977207/" target="_blank">Kyriakos Kyriakou</a></li>
+                        <li><a href="https://www.linkedin.com/in/andreas-alexandrou-056528242/" target="_blank">Andreas Alexandrou</a></li>
+                        <li><a href="https://www.linkedin.com/in/sotiris-zenios-a7b22819a/" target="_blank">Sotiris Zenios</a></li>
+                        <li><a href="https://www.linkedin.com/in/nikolasstavrou/" target="_blank">Nikolas Stavrou</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
     </div>
     <script>
         window.addEventListener('scroll', function() {
