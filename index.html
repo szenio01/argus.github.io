@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI-Powered Farming Solutions: Revolutionizing Agriculture in Cyprus</title>
-	 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -37,12 +37,23 @@
         .contact {
             margin-top: 40px;
         }
+        .carousel-container {
+            display: none;
+        }
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
             font-size: 18px;
             text-align: left;
+            margin-top: 20px;
         }
         th, td {
             padding: 12px;
@@ -51,8 +62,27 @@
         th {
             background-color: #f2f2f2;
         }
-        tr:hover {
-            background-color: #f1f1f1;
+        .carousel-pagination {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .active-dot {
+            background-color: #2E8B57;
+        }
+        .content-wrapper {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
         img {
             display: block;
@@ -61,54 +91,24 @@
             max-width: 100%;
             height: auto;
         }
-        ul ul {
-            list-style-type: circle;
-            margin-left: 20px;
-        }
-        a {
-            color: #1a0dab;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .content-wrapper {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-        }
         @media (max-width: 768px) {
-            .table-responsive {
-                overflow-x: scroll;
-                white-space: nowrap;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
+            .carousel-container {
+                display: block;
+                position: relative;
+                max-width: 100%;
+                overflow: hidden;
+                margin: 20px 0;
             }
-            table {
-                display: flex;
-                scroll-snap-align: start;
+            .desktop-table {
+                display: none;
             }
-            th, td {
-                min-width: 100vw;
-                flex-shrink: 0;
-                box-sizing: border-box;
+        }
+        @media (min-width: 769px) {
+            .carousel-container {
+                display: none;
             }
-            .table-pagination {
-                text-align: center;
-                margin-top: 10px;
-            }
-            .dot {
-                height: 10px;
-                width: 10px;
-                margin: 0 5px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-            }
-            .active-dot {
-                background-color: #2E8B57;
+			.carousel-pagination{
+                display: none;
             }
         }
     </style>
@@ -136,64 +136,260 @@
             <p>We are a team of six passionate AI engineers with strong backgrounds in computer science and artificial intelligence. Our expertise and international experiences empower us to develop innovative solutions for real-world challenges, particularly in agriculture. Our goal is to transform traditional industries using AI, starting with farming.</p>
             <img src="team.png" alt="Team Image">
             <h3>Team Members</h3>
-            <div class="table-responsive">
-                 <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Education</th>
-                            <th>Current Status</th>
-                            <th>Experience</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Andreas Pattichis</th>
-                            <td>Co-Founder & CEO/Project Manager</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Barcelona (EMAI Programme), studying with a fully funded scholarship.</td>
-                            <td class="truncate">Leading the strategic direction and project management of the company.</td>
-                            <td>Extensive background in AI with a focus on Medical Imaging. Full stack development experience in a corporate environment. Strong creative and entrepreneurial skills demonstrated in past projects.</td>
-                        </tr>
-                        <tr>
-                            <th>Kyriakos Kyriakou</th>
-                            <td>Co-Founder & CTO</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Master’s in AI from the University of Edinburgh.</td>
-                            <td class="truncate">Leading the technical direction of the company.</td>
-                            <td>Specialization in AI, software engineering, and data management with extensive knowledge gained through academic and professional experience. Consulting experience from both current and past roles.</td>
-                        </tr>
-                        <tr>
-                            <th>Andreas Alexandrou</th>
-                            <td>Co-Founder & AI/Software Engineer</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                            <td class="truncate">Focused on advancing the company’s computer vision capabilities and leading the development of vision-based AI products.</td>
-                            <td>Extensive experience in computer vision projects. Previous work experience in Analytics. Showcased innovative problem-solving skills and creativity across multiple projects.</td>
-                        </tr>
-                        <tr>
-                            <th>Nikolas Stavrou</th>
-                            <td>Co-Founder & AI/Software Engineer</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                            <td class="truncate">Contributing to the development and implementation of AI solutions, focusing on software engineering and system integration.</td>
-                            <td>Involvement in numerous AI and software engineering projects. Consulting experience from past role. Strong problem-solving skills, with a notable ability to research, learn, and apply new concepts efficiently and in-depth.</td>
-                        </tr>
-                        <tr>
-                            <th>Sotiris Zenios</th>
-                            <td>Co-Founder & AI/Software Engineer</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
-                            <td class="truncate">Specializing in AI-driven software development, working on the integration of AI technologies into practical applications.</td>
-                            <td>Participation in a variety of AI and software engineering projects. Full stack development experience in a corporate environment. Consistent adaptability skills in fast-paced environments.</td>
-                        </tr>
-                        <tr>
-                            <th>Christos Eleftheriou</th>
-                            <td>Co-Founder & AI/Software Engineer</td>
-                            <td class="truncate">Bachelor’s in Computer Science. Currently completing a Master’s in AI at the University of Cyprus, expected December.</td>
-                            <td class="truncate">Focused on refining AI algorithms and ensuring the robustness of the company’s software solutions.</td>
-                            <td>Involvement in numerous AI and software engineering projects. Experience with data science through large projects like his thesis.</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <!-- Desktop Table View -->
+            <table class="desktop-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Education</th>
+                        <th>Current Status</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Andreas Pattichis</td>
+                        <td>Co-Founder & CEO/Project Manager</td>
+                        <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Barcelona (EMAI Programme), studying with a fully funded scholarship.</td>
+                        <td>Leading the strategic direction and project management of the company.</td>
+                        <td>Extensive background in AI with a focus on Medical Imaging. Full stack development experience in a corporate environment. Strong creative and entrepreneurial skills demonstrated in past projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Kyriakos Kyriakou</td>
+                        <td>Co-Founder & CTO</td>
+                        <td>Bachelor’s in Computer Science. Master’s in AI from the University of Edinburgh.</td>
+                        <td>Leading the technical direction of the company.</td>
+                        <td>Specialization in AI, software engineering, and data management with extensive knowledge gained through academic and professional experience. Consulting experience from both current and past roles.</td>
+                    </tr>
+                    <tr>
+                        <td>Andreas Alexandrou</td>
+                        <td>Co-Founder & AI/Software Engineer</td>
+                        <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                        <td>Focused on advancing the company’s computer vision capabilities and leading the development of vision-based AI products.</td>
+                        <td>Extensive experience in computer vision projects. Previous work experience in Analytics. Showcased innovative problem-solving skills and creativity across multiple projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Nikolas Stavrou</td>
+                        <td>Co-Founder & AI/Software Engineer</td>
+                        <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                        <td>Contributing to the development and implementation of AI solutions, focusing on software engineering and system integration.</td>
+                        <td>Involvement in numerous AI and software engineering projects. Consulting experience from past role. Strong problem-solving skills, with a notable ability to research, learn, and apply new concepts efficiently and in-depth.</td>
+                    </tr>
+                    <tr>
+                        <td>Sotiris Zenios</td>
+                        <td>Co-Founder & AI/Software Engineer</td>
+                        <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                        <td>Specializing in AI-driven software development, working on the integration of AI technologies into practical applications.</td>
+                        <td>Participation in a variety of AI and software engineering projects. Full stack development experience in a corporate environment. Consistent adaptability skills in fast-paced environments.</td>
+                    </tr>
+                    <tr>
+                        <td>Christos Eleftheriou</td>
+                        <td>Co-Founder & AI/Software Engineer</td>
+                        <td>Bachelor’s in Computer Science. Currently completing a Master’s in AI at the University of Cyprus, expected December.</td>
+                        <td>Focused on refining AI algorithms and ensuring the robustness of the company’s software solutions.</td>
+                        <td>Involvement in numerous AI and software engineering projects. Experience with data science through large projects like his thesis.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Mobile Carousel View -->
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Andreas Pattichis</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & CEO/Project Manager</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Barcelona (EMAI Programme), studying with a fully funded scholarship.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Leading the strategic direction and project management of the company.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Extensive background in AI with a focus on Medical Imaging. Full stack development experience in a corporate environment. Strong creative and entrepreneurial skills demonstrated in past projects.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Kyriakos Kyriakou</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & CTO</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Master’s in AI from the University of Edinburgh.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Leading the technical direction of the company.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Specialization in AI, software engineering, and data management with extensive knowledge gained through academic and professional experience. Consulting experience from both current and past roles.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Andreas Alexandrou</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & AI/Software Engineer</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Focused on advancing the company’s computer vision capabilities and leading the development of vision-based AI products.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Extensive experience in computer vision projects. Previous work experience in Analytics. Showcased innovative problem-solving skills and creativity across multiple projects.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Nikolas Stavrou</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & AI/Software Engineer</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Contributing to the development and implementation of AI solutions, focusing on software engineering and system integration.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Involvement in numerous AI and software engineering projects. Consulting experience from past role. Strong problem-solving skills, with a notable ability to research, learn, and apply new concepts efficiently and in-depth.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Sotiris Zenios</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & AI/Software Engineer</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Currently in the final year of a Master’s in AI at Utrecht University.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Specializing in AI-driven software development, working on the integration of AI technologies into practical applications.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Participation in a variety of AI and software engineering projects. Full stack development experience in a corporate environment. Consistent adaptability skills in fast-paced environments.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="carousel-item">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Attribute</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Name</th>
+                                    <td>Christos Eleftheriou</td>
+                                </tr>
+                                <tr>
+                                    <th>Role</th>
+                                    <td>Co-Founder & AI/Software Engineer</td>
+                                </tr>
+                                <tr>
+                                    <th>Education</th>
+                                    <td>Bachelor’s in Computer Science. Currently completing a Master’s in AI at the University of Cyprus, expected December.</td>
+                                </tr>
+                                <tr>
+                                    <th>Current Status</th>
+                                    <td>Focused on refining AI algorithms and ensuring the robustness of the company’s software solutions.</td>
+                                </tr>
+                                <tr>
+                                    <th>Experience</th>
+                                    <td>Involvement in numerous AI and software engineering projects. Experience with data science through large projects like his thesis.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-			<div class="table-pagination">
+            <div class="carousel-pagination">
                 <span class="dot active-dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -202,14 +398,13 @@
                 <span class="dot"></span>
             </div>
             <script>
-                const tableResponsive = document.querySelector('.table-responsive');
+                const carouselSlide = document.querySelector('.carousel-slide');
+                const carouselItems = document.querySelectorAll('.carousel-item');
                 const dots = document.querySelectorAll('.dot');
-                
-                tableResponsive.addEventListener('scroll', () => {
-                    const scrollWidth = tableResponsive.scrollWidth - tableResponsive.clientWidth;
-                    const scrollLeft = tableResponsive.scrollLeft;
-                    const currentIndex = Math.round((scrollLeft / scrollWidth) * (dots.length - 1));
-                    
+                let currentIndex = 0;
+
+                function updateCarousel() {
+                    carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
                     dots.forEach((dot, index) => {
                         if (index === currentIndex) {
                             dot.classList.add('active-dot');
@@ -217,6 +412,28 @@
                             dot.classList.remove('active-dot');
                         }
                     });
+                }
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateCarousel();
+                    });
+                });
+
+                // Optionally add swipe functionality
+                let startX;
+                carouselSlide.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                carouselSlide.addEventListener('touchend', (e) => {
+                    const endX = e.changedTouches[0].clientX;
+                    if (startX > endX + 50 && currentIndex < carouselItems.length - 1) {
+                        currentIndex++;
+                    } else if (startX < endX - 50 && currentIndex > 0) {
+                        currentIndex--;
+                    }
+                    updateCarousel();
                 });
             </script>
             <h3>Future Team Growth and Strategic Partnerships</h3>
