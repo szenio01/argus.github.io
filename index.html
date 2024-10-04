@@ -12,7 +12,7 @@
             margin: 20px;
         }
         html, body {
-            scroll-behavior: smooth
+            scroll-behavior: smooth;
         }
         .info-box {
             background-color: #f0f8ff;
@@ -43,7 +43,6 @@
             margin: 20px 0;
             font-size: 18px;
             text-align: left;
-            overflow-x: auto;
         }
         th, td {
             padding: 12px;
@@ -59,7 +58,8 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
+            max-width: 100%;
+            height: auto;
         }
         ul ul {
             list-style-type: circle;
@@ -73,14 +73,43 @@
             text-decoration: underline;
         }
         .content-wrapper {
-            width: 70%;
+            width: 90%;
             margin: 0 auto;
             padding: 20px;
             position: relative;
             z-index: 1;
         }
-        .table-responsive {
-            overflow-x: auto;
+        @media (max-width: 768px) {
+            .table-responsive {
+                overflow-x: scroll;
+                white-space: nowrap;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+            }
+            table {
+                display: flex;
+                scroll-snap-align: start;
+            }
+            th, td {
+                min-width: 100vw;
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+            .table-pagination {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .dot {
+                height: 10px;
+                width: 10px;
+                margin: 0 5px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .active-dot {
+                background-color: #2E8B57;
+            }
         }
     </style>
 </head>
